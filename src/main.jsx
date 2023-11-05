@@ -5,6 +5,8 @@ import './index.css'
 import { Route, RouterProvider,Routes,createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 import Layout from '../Layout.jsx'
 import Home from './Components/Home/Home.jsx'
+import AboutSection from './Components/About/About.jsx'
+import ContactSection from './Components/Contact/Contact.jsx'
 
 const router = createBrowserRouter(
       createRoutesFromElements(
@@ -12,6 +14,8 @@ const router = createBrowserRouter(
         
         <Route path='/' element={<Layout/>} >
           <Route path='' element = {<Home/>} />
+          <Route path='/about' element={<AboutSection/>}/>
+          <Route path='/Contactus' element={<ContactSection/>}/>
           
           </Route>
         </>

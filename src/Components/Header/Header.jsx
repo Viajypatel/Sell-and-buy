@@ -82,13 +82,13 @@ export default function Header() {
 
             <div className="nav-bar-lower-section">
                 <ul className="icons">
-                    <li className="Home">Home</li>
-                    <li className="Home">Books</li>
-                    <li className="Home">Electronics</li>
-                    <li className="Home">Furniture</li>
-                    <li className="Home">Other</li>
-                    <li className="Home">Contact us</li>
-                    <li className="Home">About us</li>
+                    <Link to="/" className="Home">Home</Link>
+                    <Link className="Home">Books</Link>
+                    <Link className="Home">Electronics</Link>
+                    <Link className="Home">Furniture</Link>
+                    <Link className="Home">Other</Link>
+                    <Link to='/Contactus' className="Home">Contact us</Link>
+                    <Link to="/about" className="Home">About us</Link>
 
                 </ul>
             </div>
