@@ -6,9 +6,19 @@ import ManuImg from "./images/menu.png"
 import HeartImg from "./images/heart.png"
 import LoginImg from "./images/login.png"
 import SearchImg from "./images/search-line.png"
+import { useState } from "react";
+import { IconContext } from 'react-icons';
+import * as FaIcons from 'react-icons/fa';
+import * as AiIcons from 'react-icons/ai';
+import { SidebarData } from './Sidebar';
 
 
 export default function Header() {
+
+    const [sidebar, setSidebar] = useState(false);
+
+    const showSidebar = () => setSidebar(!sidebar);
+
      return (
         <header className="header">
 
@@ -21,9 +31,35 @@ export default function Header() {
 
                 <div className="menu-upper">
 
-                    <div className="menu">
-                        <img src={ManuImg} alt=""/>
-                    </div>
+                    <div className="navbar-seactiom">
+                        {/* <img src={ManuImg} alt=""/> */}
+                        <IconContext.Provider value={{ color: '#fff' }}>
+                                <div className='navbar'>
+                                <Link to='#' className='menu-bars'>
+                                    <FaIcons.FaBars onClick={showSidebar} />
+                                </Link>
+                                </div>
+                                <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+                                <ul className='nav-menu-items' onClick={showSidebar}>
+                                    <li className='navbar-toggle'>
+                                    <Link to='#' className='menu-bars'>
+                                        <AiIcons.AiOutlineClose />
+                                    </Link>
+                                    </li>
+                                    {SidebarData.map((item, index) => {
+                                    return (
+                                        <li key={index} className={item.cName}>
+                                        <Link to={item.path}>
+                                            {item.icon}
+                                            <span>{item.title}</span>
+                                        </Link>
+                                        </li>
+                                    );
+                                    })}
+                                </ul>
+                                </nav>
+                            </IconContext.Provider>
+                      </div>
 
                     <div className="student-bazaar-logo">
 
@@ -46,7 +82,7 @@ export default function Header() {
                 </div>
 
                 {/* <!-- side section of bar --> */}
-                <div className="side-icons-section">
+                <div className="side-icons-section"  >
 
                     <div className="search">
                         <img src={SearchImg} alt=""/>
