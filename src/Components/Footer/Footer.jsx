@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="footer1">
             <div className="names">
                 <div className="logo2">
-                    Student <span style={{color: "white"}}>Bazaar</span>
+                    EmpoweringSecondhand<span style={{color: "white"}}>Exchange</span>
                 </div>
                 <div className="content1">
                     <div className="item10">
@@ -21,11 +21,11 @@ export default function Footer() {
                     </div>
                     <div className="item10">
                         <div>Location</div>
-                        <div>Near IET college,</div>
-                        <div>Lucknow University</div>
+                        <div>Near jankipuram</div>
+                        <div>IET Lucknow</div>
                         <div>Contact</div>
-                        <div>5656254152</div>
-                        <div>5256412555</div>
+                        <div>6386082542</div>
+                        <div>9917642204</div>
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@ export default function Footer() {
 
 
                 <div className="copyrights">
-                    <h1>&copy;Copyright_student_bazaar</h1>
+                    <h1>&copy;Empowering Secondhand Exchange</h1>
                 </div>
 
 

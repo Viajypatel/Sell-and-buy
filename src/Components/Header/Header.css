@@ -20,8 +20,12 @@
   .navbar{
      display: none;
   }
-  
+  .navbar-seactiom {
+    display: flex;
+    align-items: center;
+}
   .menu-bars {
+
     margin-left: 0.5rem;
     font-size: 5vw;
     background: none;
@@ -90,7 +94,13 @@
     margin-left: 16px;
   }
 
-
+.horizontal{
+    margin: 10px;
+}
+.horizontal p{
+    color: white;
+    margin-left: 9px;
+}
 .nav-bar-upper-section{
     
 
